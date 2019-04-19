@@ -1,15 +1,24 @@
 #include<stdio.h>
+#include<ctype.h>
 int main()
 {
-  char input[20];
+  char input[20],i,count=0;
   scanf("%s",&input);
-  if(isdigit(input))
+  for(i=0;input[i] != '\0';i++)
   {
-    printf("yes");
+  
+  if(isdigit(input[i]) == 0)
+  {
+   count=1;
+  }
+  }
+  if(count == 1)
+  {
+  	printf("No");
   }
   else
   {
-    printf("No");
+    printf("yes");
   }
   return 0;
 }
