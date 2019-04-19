@@ -1,7 +1,7 @@
-list1=['Monday','Tuesday','Wednessday','Thursday','Friday']
-list2=['Saturday','Sunday']
+weekday=['Monday','Tuesday','Wednessday','Thursday','Friday']
+weekend=['Saturday','Sunday']
 str=input()
-if(str in list1):
+if(str in weekday):
   print("No")
-elif(str in list2):
+elif(str in weekend):
   print("Yes")
