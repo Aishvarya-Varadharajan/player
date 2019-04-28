@@ -1,9 +1,12 @@
 #include<stdio.h>
 int main()
 {
-  int l,b,a;
-  scanf("%d %d",&l,&b);
-  a=(l*b)/2;
-  printf("%d",a);
+  int height,base,area;
+  scanf("%d %d",&height,&base);
+  if((height <= 1000000) && (base <= 1000000))
+  {
+    area=(height*base)/2;
+    printf("%d",area);
+  }
   return 0;
 }
