@@ -1,2 +1,3 @@
-str=input()
-print(str,end='.')
+value=input()
+print()
+print(value,end='.')
