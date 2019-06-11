@@ -2,32 +2,29 @@
 #include<string.h>
 int main()
 {
-  char str1[20],str2[20],str3[20];
+  char str1[20],str2[20]={0},str3[20]={0};
   int length,i,j=0;
-  scanf("%s",str1);
+  scanf("%s",&str1);
   length=strlen(str1);
   for(i=0;i<length;i++)
   {
-    if((str[i] != 'a') && (str[i] != 'e') && (str[i] != 'i') && (str[i] != 'o') && (str[i] != 'a'))
+    if((str1[i] != 'a') && (str1[i] != 'e') && (str1[i] != 'i') && (str1[i] != 'o') && (str1[i] != 'u'))
     {
-      str2[j]=str[i];
+      str2[j]=str1[i];
       j++;
     }
    }
-   length=str2;
-   for(i=0;i<length;i++)
+   length=strlen(str2);
+   j=length;
+   for(i=0;i<=length;i++)
    {
-      for(j=length;j<=0;j++)
-      {
-          str3[i] = str3[j];
-       }
+     str3[i]=str2[j];
+     printf("%c",str3[i]);
+     j--;
     }
     printf("%s",str3);
     return 0;
   }
-   
-  
-   
   
   
   
