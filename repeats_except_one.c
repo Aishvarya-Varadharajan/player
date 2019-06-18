@@ -1,27 +1,32 @@
 #include<stdio.h>
-#include<string.h>
 int main()
 {
-  char str[50];
-  char s;
-  gets(str);
-  int i,len,count = 0,temp=0,j;
-  len=strlen(str);
-  for(i=0;i<len;i++)
+  int N;
+  scanf("%d",&N);
+  int arr[N];
+  int i,len,count = 0,j;
+  for(i=0;i<N;i++)
   {
-    for(j=i+1;j<len;j++)
+    scanf("%d",&arr[i]);
+  }
+  for(i=0;i<N;i++)
+  {
+    count =0;
+    for(j=0;j<N;j++)
     {
-      if(str[i] == str[j])
+      if(i != j)
       {
-        count++;
+        if(arr[i] == arr[j])
+        {
+          count = 1;
+        }
       }
-    }
-    if(count > temp)
+   }
+    if(count == 0)
     {
-      temp =count;
-      s=str[i];
+     printf("%d",arr[i]);
     }
  }
- printf("%c",s);
+ 
  return 0;
  }
