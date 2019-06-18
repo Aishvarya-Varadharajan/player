@@ -3,30 +3,32 @@ int main()
 {
   int N;
   scanf("%d",&N);
-  int arr[N];
-  int i,len,count = 0,j;
-  for(i=0;i<N;i++)
+  if(N <= 100000)
   {
-    scanf("%d",&arr[i]);
-  }
-  for(i=0;i<N;i++)
-  {
-    count =0;
-    for(j=0;j<N;j++)
+    int arr[N];
+    int i,len,count = 0,j;
+    for(i=0;i<N;i++)
     {
-      if(i != j)
+      scanf("%d",&arr[i]);
+    }
+    for(i=0;i<N;i++)
+    {
+      count =0;
+      for(j=0;j<N;j++)
       {
-        if(arr[i] == arr[j])
+        if(i != j)
         {
-          count = 1;
+          if(arr[i] == arr[j])
+          {
+            count = 1;
+          }
         }
+     }
+      if(count == 0)
+      {
+       printf("%d",arr[i]);
       }
    }
-    if(count == 0)
-    {
-     printf("%d",arr[i]);
-    }
  }
- 
  return 0;
  }
