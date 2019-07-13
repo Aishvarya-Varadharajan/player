@@ -3,6 +3,8 @@ int main()
 {
   int num,i,j,k,limit,flag=0;
   scanf("%d",&num);
+  if((num >= 2) && (num <= 1000000))
+  {
   limit=num;
   for(i=2;i<limit;i++)
   {
@@ -21,6 +23,6 @@ int main()
   {
   	printf("%d",num);
   }
-
+  }
    return 0;
 }
